@@ -1,0 +1,20 @@
+[package]
+name = "bonjour"
+version = "0.1.0"
+description = "A little French, every day."
+edition = "2021"
+rust-version = "1.90"
+
+[lib]
+name = "bonjour_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+
+[features]
+default = []
+custom-protocol = ["tauri/custom-protocol"]
